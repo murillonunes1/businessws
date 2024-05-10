@@ -1,11 +1,5 @@
 'use strict';
 
-
-
-/**
- * add event on element
- */
-
 const addEventOnElem = function (elem, type, callback) {
   if (elem.length > 1) {
     for (let i = 0; i < elem.length; i++) {
@@ -15,12 +9,6 @@ const addEventOnElem = function (elem, type, callback) {
     elem.addEventListener(type, callback);
   }
 }
-
-
-
-/**
- * navbar toggle
- */
 
 const navbar = document.querySelector("[data-navbar]");
 const navToggler = document.querySelectorAll("[data-nav-toggler]");
@@ -33,12 +21,6 @@ const toggleNavbar = function () {
 
 addEventOnElem(navToggler, "click", toggleNavbar);
 
-
-
-/**
- * close navbar when click on any navbar links
- */
-
 const navLinks = document.querySelectorAll("[data-nav-link]");
 
 const closeNavbar = function () {
@@ -48,12 +30,6 @@ const closeNavbar = function () {
 
 addEventOnElem(navLinks, "click", closeNavbar);
 
-
-
-/**
- * header active when scroll down
- */
-
 const header = document.querySelector("[data-header]");
 
 const headerActive = function () {
@@ -62,12 +38,6 @@ const headerActive = function () {
 }
 
 addEventOnElem(window, "scroll", headerActive);
-
-
-
-/**
- * accordion toggle
- */
 
 const accordionAction = document.querySelectorAll("[data-accordion-action]");
 
